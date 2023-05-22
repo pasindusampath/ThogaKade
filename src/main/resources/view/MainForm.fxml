@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1350.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assert/main.png" />
+         </image>
+      </ImageView>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="65.0" layoutY="155.0" onAction="#btnHomeOnAction" prefHeight="43.0" prefWidth="52.0" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="65.0" layoutY="253.0" onAction="#btnCustomerOnAction" prefHeight="43.0" prefWidth="52.0" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/customers.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="65.0" layoutY="353.0" onAction="#btnStockOnAction" prefHeight="43.0" prefWidth="52.0" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/stock.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="65.0" layoutY="460.0" onAction="#btnBillingOnAction" prefHeight="43.0" prefWidth="52.0" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/billing.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="navigationalContext" layoutX="269.0" layoutY="39.0" prefHeight="578.0" prefWidth="1034.0" />
+   </children>
+</AnchorPane>

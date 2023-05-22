@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="578.0" prefWidth="1034.0" stylesheets="@../stylesheet/modern/PlaceOrderForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFomController">
+   <children>
+      <ImageView fitHeight="578.0" fitWidth="1034.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assert/rect.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="customerPane" layoutX="21.0" layoutY="32.0" prefHeight="233.0" prefWidth="381.0">
+         <children>
+            <JFXTextField fx:id="txtCustName" layoutX="43.0" layoutY="76.0" prefHeight="25.0" prefWidth="307.0" promptText="Customer Name" unFocusColor="#7ecbd7" />
+            <JFXTextField fx:id="txtMobileName" layoutX="43.0" layoutY="117.0" prefHeight="25.0" prefWidth="307.0" promptText="Customer Contact" unFocusColor="#7ecbd7" />
+            <JFXTextField fx:id="txtCustomerAddress" layoutX="43.0" layoutY="158.0" prefHeight="25.0" prefWidth="307.0" promptText="Customer Address" unFocusColor="#7ecbd7" />
+            <JFXComboBox fx:id="cbCustomers" layoutX="72.0" layoutY="30.0" onAction="#cbCustomersOnAction" prefHeight="32.0" prefWidth="252.0" promptText="Select Customer" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="customerPane1" layoutX="609.0" layoutY="32.0" prefHeight="233.0" prefWidth="404.0">
+         <children>
+            <JFXComboBox fx:id="cbItems" layoutX="78.0" layoutY="21.0" onAction="#cbItemsOnAction" prefHeight="32.0" prefWidth="252.0" promptText="Select Item" />
+            <JFXTextField fx:id="txtItemDescription" editable="false" layoutX="223.0" layoutY="80.0" prefHeight="25.0" prefWidth="156.0" promptText="Description" unFocusColor="#7ecbd7" />
+            <JFXTextField fx:id="txtAvailableQty" layoutX="46.0" layoutY="178.0" prefHeight="25.0" prefWidth="156.0" promptText="Available Qty" unFocusColor="#7ecbd7" />
+            <JFXTextField fx:id="txtItemPrice" editable="false" layoutX="223.0" layoutY="127.0" prefHeight="25.0" prefWidth="156.0" promptText="Price" unFocusColor="#7ecbd7" />
+            <JFXTextField fx:id="txtQty" editable="false" layoutX="46.0" layoutY="127.0" onKeyReleased="#txtKeyPressedOnAction" prefHeight="25.0" prefWidth="156.0" promptText="Qty" unFocusColor="#7ecbd7" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="301.0" layoutY="178.0" onAction="#btnAddToCartOnAction" prefHeight="41.0" prefWidth="58.0" text="Button">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assert/add%20to%20cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="txtItemCode" editable="false" layoutX="46.0" layoutY="80.0" prefHeight="25.0" prefWidth="156.0" promptText="Item Code" unFocusColor="#7ecbd7" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblCart" layoutX="222.0" layoutY="298.0" prefHeight="200.0" prefWidth="612.0">
+        <columns>
+          <TableColumn fx:id="colItemName" prefWidth="233.0" text="Description" />
+          <TableColumn fx:id="colQty" minWidth="0.0" prefWidth="91.0" text="QTY" />
+            <TableColumn fx:id="colPrice" prefWidth="150.0" text="Price" />
+            <TableColumn fx:id="colTotal" prefWidth="137.0" text="Sub Total" />
+        </columns>
+      </TableView>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="782.0" layoutY="510.0" onAction="#btnRemoveFromCartOnAction" prefHeight="41.0" prefWidth="58.0">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/remove%20from%20cart.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="874.0" layoutY="507.0" onAction="#btnPlaceOrderOnAction" prefHeight="41.0" prefWidth="58.0">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/purchase%20order.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="482.0" layoutY="99.0" prefHeight="25.0" prefWidth="58.0" text="Order ID" />
+      <JFXTextField fx:id="txtOrderId" alignment="CENTER" layoutX="450.0" layoutY="136.0" />
+   </children>
+</AnchorPane>

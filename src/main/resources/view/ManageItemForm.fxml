@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="578" prefWidth="1034" stylesheets="@../stylesheet/modern/CustomerManageForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemFormController">
+    <children>
+        <ImageView fitHeight="578.0" fitWidth="1034.0" pickOnBounds="true">
+            <image>
+                <Image url="@../assert/rect.png" />
+            </image>
+        </ImageView>
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="274.0" layoutX="31.0" layoutY="164.0" stroke="#9effea" strokeType="INSIDE" width="307.0" />
+        <JFXTextField fx:id="txtItemCode" focusColor="#a0f2e9" layoutX="46.0" layoutY="187.0" prefHeight="25.0" prefWidth="186.0" promptText="Item Code" unFocusColor="#66aba0" />
+        <JFXTextField fx:id="txtItemName" focusColor="#a0f2e9" layoutX="47.0" layoutY="246.0" prefHeight="25.0" prefWidth="267.0" promptText="Item Name" unFocusColor="#66aba0" />
+        <JFXTextField fx:id="txtPrice" focusColor="#a0f2e9" layoutX="47.0" layoutY="301.0" prefHeight="25.0" prefWidth="267.0" promptText="Item Price" unFocusColor="#66aba0" />
+        <JFXTextField fx:id="txtQty" focusColor="#a0f2e9" layoutX="47.0" layoutY="357.0" prefHeight="25.0" prefWidth="267.0" promptText="QTY" unFocusColor="#66aba0" />
+        <TableView fx:id="tblItem" layoutX="421.0" layoutY="161.0" onMouseClicked="#tblItemsOnMouseClickAction" prefHeight="352.0" prefWidth="558.0">
+            <columns>
+                <TableColumn fx:id="colDescription" prefWidth="176.0" text="Description" />
+                <TableColumn fx:id="colAvailableQty" prefWidth="245.0" text="Available Qty" />
+                <TableColumn fx:id="colPrice" prefWidth="135.0" text="Price" />
+            </columns>
+        </TableView>
+        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="44.0" layoutY="457.0" onAction="#btnAddOnAction">
+            <graphic>
+                <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assert/add%20item.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="116.0" layoutY="455.0" onAction="#btnUpdateOnAction">
+            <graphic>
+                <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assert/save.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="195.0" layoutY="460.0" onAction="#btnDeleteOnAction">
+            <graphic>
+                <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assert/delete.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="273.0" layoutY="460.0" onAction="#btnClearOnAction">
+            <graphic>
+                <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assert/clear.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="285.0" layoutY="181.0" onAction="#btnSearchOnAction" prefHeight="36.0" prefWidth="44.0">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="243.0" layoutY="181.0" onAction="#btnItemCodeRefreshOnAction" prefHeight="36.0" prefWidth="44.0">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assert/sync.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+    </children>
+
+</AnchorPane>

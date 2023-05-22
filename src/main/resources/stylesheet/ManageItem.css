@@ -1,0 +1,37 @@
+#btnAdd,#btnUpdate,#btnDelete,#btnClear{
+    -fx-background-color: black;
+    -fx-background-radius: 20;
+}
+.text-field{
+    -fx-prompt-text-fill: rgba(0, 0, 0, 0.71);
+}
+
+#btnAdd:hover{
+    -fx-text-fill: #63fffa;
+}
+#btnUpdate:hover{
+    -fx-text-fill: #f5da94;
+}
+#btnDelete:hover{
+    -fx-text-fill: #ff0022;
+}
+#btnClear:hover{
+    -fx-text-fill: #f17969;
+}
+
+#btnAdd:pressed{
+    -fx-background-color: #313030;
+    -fx-text-fill: #000000;
+}
+#btnUpdate:pressed{
+    -fx-background-color: #313030;
+    -fx-text-fill: #000000;
+}
+#btnDelete:pressed{
+    -fx-background-color: #313030;
+    -fx-text-fill: #000000;
+}
+#btnClear:pressed{
+    -fx-background-color: #313030;
+    -fx-text-fill: #000000;
+}
